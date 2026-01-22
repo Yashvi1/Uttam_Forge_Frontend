@@ -2,6 +2,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 @theme {
   /* This creates utilities like bg-background, text-primary, etc. */
   --color-background: #F2F3F4;
@@ -29,7 +30,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground leading-relaxed;
     font-family: "Inter", sans-serif;
   }
 }
@@ -67,6 +68,11 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+
+    /* Typography scale */
+  --font-size-base: 1.05rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.3rem;
 
   @keyframes accordion-down {
     from {

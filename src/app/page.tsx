@@ -8,44 +8,61 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen bg-background text-text">
 
-     
+     {/* text-base
+     text-lg
+     text-xl
+     can be used for font sizes */}
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-6">
+        <div className="space-y-6"> 
           <h2 className="text-4xl font-extrabold leading-tight">
-            Duty Footwear Built for  
-            <span className="text-primary"> Strength & Endurance</span>
+            Official Duty Shoes for  
+            <span className="text-primary"> Police, Army, NCC & NSS</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-xl">
-            Supplying reliable leather footwear for Police, Army, NCC and
-            institutional forces across India.
+            {/* Supplying reliable leather footwear for Police, Army, NCC and
+            institutional forces across India. */}
+            Daily duty, parade aur field use ke liye trusted leather footwear.
+  Bulk aur unit supply available across India.
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Link href="/catalog">
-              <Button className="bg-primary text-primary-foreground px-6 py-3 font-bold">
-                View Catalogue
+
+            <Link href="/order">
+              <Button variant="action" className="bg-primary text-primary-foreground px-6 py-3 font-bold">
+                Unit Orders
               </Button>
             </Link>
 
             <Link href="/bulk-order">
-              <Button variant="outline" className="px-6 py-3 font-semibold">
-                Bulk / Unit Orders
+              <Button variant="action" className="bg-primary text-primary-foreground px-6 py-3 font-bold">
+                Bulk Orders
               </Button>
             </Link>
+
+            <Link href="/catalog">
+              <Button variant="outline" className="px-6 py-3 font-semibold">
+                View Shoes Models
+              </Button>
+            </Link>
+
+            <p>No online payment • Quotation call / WhatsApp pe milega
+</p>
+
+            
           </div>
         </div>
 
         <Card className="shadow-lg">
-          <CardContent className="p-0">
+          <CardContent className="p-4">
             <Image
-              src="/shoe-banner.jpg"
+              src="/shoes2.jpg"
               alt="Duty Shoes"
               width={600}
               height={400}
-              className="rounded-md object-cover"
+              className="rounded-md object-cover center"
             />
           </CardContent>
         </Card>
@@ -72,9 +89,9 @@ export default function LandingPage() {
 
           <div className="space-y-2">
             <CheckCircle className="mx-auto h-8 w-8 text-primary" />
-            <h3 className="font-semibold">COD & Phone Confirmation</h3>
+            <h3 className="font-semibold">Official Supply Process</h3>
             <p className="text-sm text-muted-foreground">
-              Transparent and secure ordering
+              Transparent and secure ordering by COD & Phone Confirmation
             </p>
           </div>
         </div>
@@ -83,11 +100,11 @@ export default function LandingPage() {
       {/* Product Preview */}
       <section className="max-w-7xl mx-auto px-6 py-12">
         <h3 className="text-2xl font-bold mb-6">
-          Popular Duty Footwear
+          Commonly Ordered Duty Shoes
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {["/shoe1.jpg", "/shoe2.jpg", "/shoe3.jpg", "/shoe4.jpg"].map(
+          {["/shoes1.jpg", "/shoes2.jpg", "/main-shoe.jpg", "/shoes1.jpg"].map(
             (src, i) => (
               <Card key={i}>
                 <CardContent className="p-4 text-center">
@@ -109,37 +126,65 @@ export default function LandingPage() {
       </section>
 
       {/* How Ordering Works */}
-      <section className="bg-card border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <h3 className="text-2xl font-bold mb-8 text-center">
-            How Ordering Works
-          </h3>
 
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div>
-              <p className="text-lg font-bold">1</p>
-              <p className="font-semibold">Select Footwear</p>
-              <p className="text-sm text-muted-foreground">
-                Choose from our catalogue
-              </p>
-            </div>
-            <div>
-              <p className="text-lg font-bold">2</p>
-              <p className="font-semibold">Submit Requirement</p>
-              <p className="text-sm text-muted-foreground">
-                Individual or bulk order
-              </p>
-            </div>
-            <div>
-              <p className="text-lg font-bold">3</p>
-              <p className="font-semibold">Confirmation Call</p>
-              <p className="text-sm text-muted-foreground">
-                Size, pricing & delivery finalized
-              </p>
-            </div>
+      <section className="bg-card border-y border-border">
+  <div className="max-w-7xl mx-auto px-6 py-14">
+    
+    <h3 className="text-3xl font-extrabold mb-10 text-center">
+      Order Process – Simple & Clear
+    </h3>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      {/* Step 1 */}
+      <Card className="border-2 border-primary/20">
+        <CardContent className="p-6 text-center space-y-4">
+          <div className="mx-auto w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+            1
           </div>
-        </div>
-      </section>
+          <h4 className="text-xl font-bold">Select Footwear</h4>
+          <p className="text-base text-muted-foreground">
+            Catalogue se duty shoes choose karein – parade, daily ya field use.
+          </p>
+        </CardContent>
+      </Card>
+
+      {/* Step 2 */}
+      <Card className="border-2 border-primary/20">
+        <CardContent className="p-6 text-center space-y-4">
+          <div className="mx-auto w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+            2
+          </div>
+          <h4 className="text-xl font-bold">Submit Requirement</h4>
+          <p className="text-base text-muted-foreground">
+            Quantity, sizes aur delivery location fill karein.
+          </p>
+        </CardContent>
+      </Card>
+
+      {/* Step 3 */}
+      <Card className="border-2 border-primary/20">
+        <CardContent className="p-6 text-center space-y-4">
+          <div className="mx-auto w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+            3
+          </div>
+          <h4 className="text-xl font-bold">Confirmation Call</h4>
+          <p className="text-base text-muted-foreground">
+            Pricing, size aur delivery call / WhatsApp pe confirm hoga.
+          </p>
+        </CardContent>
+      </Card>
+
+    </div>
+
+    {/* Reassurance Line */}
+    <p className="text-center text-base mt-8 text-muted-foreground">
+      Online payment required nahi hai • Order call ke baad confirm hota hai
+    </p>
+
+  </div>
+</section>
+
 
 
     </main>

@@ -2,10 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { StaticImageData } from "next/image";
-import mainShoe from "@/public/main-shoe.jpg";
-import shoes1 from "@/public/shoes1.jpg";
-import shoes2 from "@/public/shoes2.jpg";
 import shoes3 from "@/public/shoes3.jpg";
 import shoes4 from "@/public/shoes4.jpg";    
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,7 +13,7 @@ type Product = {
     name: string;
     use: string;
     price: string;
-    image: StaticImageData;
+    image: string;
 };
 
 const products: Product[] = [
@@ -26,28 +22,28 @@ const products: Product[] = [
         name: "Police Duty Shoe",
         use: "Daily Police Duty",
         price: "₹1500 approx.",
-        image: shoes1,
+        image: "/shoes1.jpg",
     },
     {
         id: 2,
         name: "Combat / Field Boot",
         use: "Training & Field Operations",
         price: "₹1800 approx.",
-        image: shoes2,
+        image: "/shoes1.jpg",
     },
     {
         id: 3,
         name: "Parade Shoe",
         use: "Ceremonial & Parade Use",
         price: "₹1700 approx.",
-        image: mainShoe,
+        image: "/shoes1.jpg",
     },
     {
         id: 4,
         name: "Heavy Duty Boot",
         use: "Rough & Long Duty",
         price: "₹2000 approx.",
-        image: shoes1,
+        image: "/shoes1.jpg",
     },
 ];
 
