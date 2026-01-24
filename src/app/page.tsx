@@ -17,8 +17,8 @@ export default function LandingPage() {
       <section className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-6"> 
           <h2 className="text-4xl font-extrabold leading-tight">
-            Official Duty Shoes for  
-            <span className="text-primary"> Police, Army, NCC & NSS</span>
+            Official Duty Shoes for 
+            <span className="text-primary"> Police, Army, NCC, NSS & Security Guards</span>
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-xl">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 import Link from "next/link";
 import "./globals.css"
@@ -7,6 +8,7 @@ import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import Navbar from "@/components/NavBar";
 import { PhoneCall } from "lucide-react";
+import PWARegister from "./pwa-register";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +25,8 @@ export const metadata = {
   title: "Uttam Forge | Duty Footwear Supplier",
   description:
     "Reliable duty footwear for Police, Army, NCC and institutional forces.",
+  manifest: "/manifest.webmanifest",
+  themeColor: "#1e3a8a",
 };
 
 
@@ -34,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-background text-text font-sans">
+        <PWARegister />
         {/* Header */}
         <Header />
 
@@ -41,9 +46,8 @@ export default function RootLayout({
         <main>{children}</main>
 
         {/* Footer */}
-        <footer className="border-t border-border text-center text-sm text-muted-foreground py-6">
-          © 2026 Uttam Forge. All rights reserved.
-        </footer>
+        <Footer />
+
       </body>
     </html>
   )

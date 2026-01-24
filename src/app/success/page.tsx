@@ -3,6 +3,8 @@ import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+// USINGGGGGGGGGGGGGG
+
 export default function SuccessPage() {
   return (
     <main className="min-h-screen bg-background text-text flex items-center justify-center p-6">

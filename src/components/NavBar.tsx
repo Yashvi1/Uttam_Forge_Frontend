@@ -16,7 +16,7 @@ export default function Navbar() {
             href="/"
             className="text-foreground font-semibold hover:text-primary"
           >
-            Home
+            NavBar Home
           </Link>
           <Link
             href="/order"
